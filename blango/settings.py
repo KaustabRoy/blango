@@ -47,8 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+    'blango_auth',
     'debug_toolbar',
 ]
+
+AUTH_USER_MODEL = "blango_auth.User"
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
