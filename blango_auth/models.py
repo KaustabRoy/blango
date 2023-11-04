@@ -9,7 +9,7 @@ class BlangoUserManager(UserManager):
             raise ValueError("Email must be set")
         email = self.normalize_email(email)
         user = self.model(email = email, **extra_fields)
-        user.set_password(passwaord)
+        user.set_password(password)
         user.save(using = self._db)
         return user
 
